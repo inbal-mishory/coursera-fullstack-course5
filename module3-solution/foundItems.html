@@ -1,0 +1,10 @@
+<div class="results">
+  <h3 ng-if="foundItemsDirective.found.length > 0">Found {{foundItemsDirective.found.length}} items</h3>
+  <ul class="foundItems">
+    <li ng-repeat="item in foundItemsDirective.found">
+        <label>{{ item.name }} ({{ item.short_name }})</label>
+        <p><small>{{ item.description }}</small></p>
+        <button class="btn btn-primary" ng-click="foundItemsDirective.onRemove({index: $index});">Don't want this one!</button>
+    </li>
+  </ul>
+</div>
